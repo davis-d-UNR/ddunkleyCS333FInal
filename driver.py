@@ -277,23 +277,34 @@ class Poker (object):
     print ("High Card")
     self.tlist.append(total_point)
     
+    
 def main ():
-  numHands = eval (input ('Enter number of hands to play: '))
-  while (numHands < 2 or numHands > 6):
-    numHands = eval( input ('Enter number of hands to play: ') )
-  game = Poker (numHands)
-  game.play()  
+    
+	numHands = 0
+    
+	while True:
+		try:
+			numHands = eval (input ('Enter number of hands to play through 2 - 6: '))
+			while (numHands < 2 or numHands > 6):
+				numHands = eval( input (' PLEASE! Enter number of hands to play through 2 - 6: ') )
+				continue
+			break
+		except:
+			print("that is not a valid option")
+	game = Poker (numHands)
+	game.play()  
 
-  print('\n')
-  for i in range(numHands):
-    curHand=game.hands[i]
-    print ("Hand "+ str(i+1) + ": " , end="")
-    game.isRoyal(curHand)
+	print('\n')
+	for i in range(numHands):
+		curHand=game.hands[i]
+		print ("Hand "+ str(i+1) + ": " , end="")
+		game.isRoyal(curHand)
 
-  maxpoint=max(game.tlist)
-  maxindex=game.tlist.index(maxpoint)
+	maxpoint=max(game.tlist)
+	maxindex=game.tlist.index(maxpoint)
 
-  print ('\nHand %d wins'% (maxindex+1))
-  
+	print ('\nHand %d wins'% (maxindex+1))
+	
 main()
+
 
