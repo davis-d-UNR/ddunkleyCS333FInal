@@ -281,16 +281,23 @@ class Poker (object):
 def main ():
     
 	numHands = 0
+	x = 0
     
 	while True:
 		try:
+			if(x > 100):
+				print("youve inputed to many worng inputs setting default to 3 hands")
+				numHands = 3
+				break
 			numHands = eval (input ('Enter number of hands to play through 2 - 6: '))
 			while (numHands < 2 or numHands > 6):
 				numHands = eval( input (' PLEASE! Enter number of hands to play through 2 - 6: ') )
 				continue
 			break
 		except:
-			print("that is not a valid option")
+			x = x + x + 1
+			print("that is not a valid option" , x)
+			
 	game = Poker (numHands)
 	game.play()  
 
