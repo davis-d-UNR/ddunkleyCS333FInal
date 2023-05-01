@@ -16,14 +16,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      # Install pip and pytest
+      # Install pip and coverage 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install coverage
       - name: Test with pytest
-        run: python -m coverage run -m test.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
-      - name: Upload pytest test results
+        run: python -m coverage run -m test.py
+      - name: Upload coverage test results
         uses: actions/upload-artifact@v3
         with:
           name: coverage-results-${{ matrix.python-version }}
