@@ -1,5 +1,4 @@
 import unittest
-import coverage
 from driver import Card, Deck, Poker
 
 class TestCard(unittest.TestCase):
