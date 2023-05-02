@@ -3,7 +3,6 @@ from io import StringIO
 import sys
 from driver import *
 
-
 class TestPoker(unittest.TestCase):
     
     def setUp(self):
