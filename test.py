@@ -95,7 +95,7 @@ class TestPoker(unittest.TestCase):
         poker.isFull(hand)
         self.assertIn(poker.tlist[0], [3_001_228,30_913, 31_739, 32_565])
 
-  class InterTestPoker(unittest.TestCase):
+class InterTestPoker(unittest.TestCase):
     
     def setUp(self):
         self.hands = [
