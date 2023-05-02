@@ -1,5 +1,8 @@
 import unittest
+import sys
 from driver import Card, Deck, Poker
+from io import StringIO
+
 
 class TestCard(unittest.TestCase):
 
