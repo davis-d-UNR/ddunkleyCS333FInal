@@ -26,7 +26,7 @@ testing:
   then enter a number for the input
 
   **python -m coverage report  **
- 
+** 
  the report states: 
  Name        Stmts   Miss  Cover
 -------------------------------
@@ -34,7 +34,7 @@ driver.py     252     20    92%
 test.py        77      0   100%
 -------------------------------
 TOTAL         329     20    94%
-
+**
   
 technology:
   python, coverage, vs code 
